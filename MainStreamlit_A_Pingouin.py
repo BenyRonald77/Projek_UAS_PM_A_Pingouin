@@ -4,7 +4,7 @@ import torch
 
 from transformers import AutoTokenizer, AutoModelForCausalLM
 from peft import PeftModel
-
+import traceback
 
 # ================================
 # STREAMLIT PAGE CONFIG
@@ -17,6 +17,14 @@ st.set_page_config(
 
 st.title("🤖 Chatbot Mirota Kampus (Fine-tuned LoRA)")
 st.caption("Multi-turn chat • Avatar seperti contoh • Skenario uji dari dataset • Siap Streamlit Cloud")
+
+
+try:
+    tokenizer, model = load_model_and_tokenizer(BASE_MODEL, ADAPTER_DIR)
+except Exception:
+    st.error("❌ Crash saat load model/adapter. Detail error:")
+    st.code(traceback.format_exc())
+    st.stop()
 
 
 # ================================
