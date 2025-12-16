@@ -1,66 +1,59 @@
 import os
+import traceback
 import streamlit as st
 import torch
 
 from transformers import AutoTokenizer, AutoModelForCausalLM
 from peft import PeftModel
-import traceback
+
 
 # ================================
-# STREAMLIT PAGE CONFIG
+# PAGE CONFIG
 # ================================
 st.set_page_config(
-    page_title="Mirota Kampus Chatbot (LoRA)",
+    page_title="Chatbot Mirota Kampus (Fine-tuned LoRA)",
     page_icon="🤖",
     layout="centered"
 )
 
 st.title("🤖 Chatbot Mirota Kampus (Fine-tuned LoRA)")
-st.caption("Multi-turn chat • Avatar seperti contoh • Skenario uji dari dataset • Siap Streamlit Cloud")
-
-
-try:
-    tokenizer, model = load_model_and_tokenizer(BASE_MODEL, ADAPTER_DIR)
-except Exception:
-    st.error("❌ Crash saat load model/adapter. Detail error:")
-    st.code(traceback.format_exc())
-    st.stop()
+st.caption("Multi-turn chat • Avatar • Skenario uji dari dataset • Streamlit Cloud")
 
 
 # ================================
-# SETTINGS (ENV OVERRIDE)
+# SETTINGS
 # ================================
 BASE_MODEL = os.getenv("BASE_MODEL", "meta-llama/Llama-3.2-1B-Instruct")  # gated
-ADAPTER_DIR = os.getenv("ADAPTER_DIR", "output_lora")                    # hasil fine-tuning
+ADAPTER_DIR = os.getenv("ADAPTER_DIR", "output_lora")
 
-USER_AVATAR = os.getenv("USER_AVATAR", "👥")
-BOT_AVATAR  = os.getenv("BOT_AVATAR", "🤖")
+USER_AVATAR = os.getenv("USER_AVATAR", "😡")
+BOT_AVATAR  = os.getenv("BOT_AVATAR", "🛍️")
 
 DEFAULT_SYSTEM_PROMPT = os.getenv(
     "SYSTEM_PROMPT",
     "Kamu adalah chatbot layanan informasi Mirota Kampus. "
-    "Jawab sesuai informasi yang kamu ketahui dari data fine-tuning. "
-    "Jika informasi bisa berbeda per cabang, jelaskan bahwa kebijakan bisa berbeda tiap cabang."
+    "Jawab dengan jelas, sopan, dan sesuai informasi yang kamu ketahui dari fine-tuning. "
+    "Jika informasi bisa berbeda antar cabang, jelaskan bahwa kebijakan dapat berbeda antar cabang."
 )
 
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
-DTYPE = torch.float16 if torch.cuda.is_available() else torch.float32
+DTYPE  = torch.float16 if torch.cuda.is_available() else torch.float32
 
 
 # ================================
 # SESSION STATE INIT
 # ================================
 if "messages" not in st.session_state:
-    st.session_state.messages = []  # list of {"role": "user"/"assistant", "content": "..."}
+    st.session_state.messages = []
 if "queued_user_text" not in st.session_state:
     st.session_state.queued_user_text = ""
 
 
 # ================================
-# TOKEN (SAFE: lokal tanpa secrets.toml tidak crash)
+# TOKEN LOADER (SAFE)
 # ================================
 def get_hf_token() -> str | None:
-    # 1) Coba dari secrets (kalau file secrets.toml ada)
+    # 1) Streamlit Cloud secrets
     try:
         tok = st.secrets.get("HF_TOKEN", None)
         if tok and str(tok).strip():
@@ -68,7 +61,7 @@ def get_hf_token() -> str | None:
     except Exception:
         pass
 
-    # 2) Fallback env var
+    # 2) Environment variable
     tok_env = os.getenv("HF_TOKEN", None)
     if tok_env and str(tok_env).strip():
         return str(tok_env).strip()
@@ -76,17 +69,16 @@ def get_hf_token() -> str | None:
     return None
 
 
+# ================================
+# MODEL LOADER (CACHED)
+# ================================
 @st.cache_resource(show_spinner=True)
 def load_model_and_tokenizer(base_model: str, adapter_dir: str):
     hf_token = get_hf_token()
     if hf_token is None:
-        st.error(
-            "HF_TOKEN belum diset.\n\n"
-            "Lokal: set environment variable HF_TOKEN\n"
-            "atau buat file .streamlit/secrets.toml berisi:\n"
-            "HF_TOKEN=\"hf_xxx\""
+        raise RuntimeError(
+            "HF_TOKEN belum diset. Tambahkan di Streamlit Secrets atau environment variable."
         )
-        st.stop()
 
     # Tokenizer
     try:
@@ -106,13 +98,14 @@ def load_model_and_tokenizer(base_model: str, adapter_dir: str):
 
     # Adapter
     if not os.path.exists(adapter_dir):
-        st.error(
-            f"Folder adapter '{adapter_dir}' tidak ditemukan.\n\n"
-            "Pastikan hasil fine-tuning LoRA kamu ada, contoh:\n"
-            "output_lora/adapter_config.json\n"
-            "output_lora/adapter_model.safetensors"
+        raise FileNotFoundError(
+            f"Folder adapter '{adapter_dir}' tidak ditemukan. Pastikan folder itu ada di repo."
         )
-        st.stop()
+
+    # Debug list adapter files
+    adapter_files = os.listdir(adapter_dir)
+    if len(adapter_files) == 0:
+        raise FileNotFoundError(f"Folder '{adapter_dir}' kosong. Upload adapter LoRA kamu ke repo.")
 
     model = PeftModel.from_pretrained(base, adapter_dir)
     model.to(DEVICE)
@@ -123,7 +116,6 @@ def load_model_and_tokenizer(base_model: str, adapter_dir: str):
 
 
 def build_messages(system_prompt: str, history: list[dict], max_context_messages: int) -> list[dict]:
-    # simpan konteks terakhir (tanpa system)
     history_trim = history[-max_context_messages:] if max_context_messages > 0 else history
     msgs = [{"role": "system", "content": system_prompt.strip()}]
     msgs.extend(history_trim)
@@ -131,15 +123,7 @@ def build_messages(system_prompt: str, history: list[dict], max_context_messages
 
 
 @torch.inference_mode()
-def generate_reply(
-    tokenizer,
-    model,
-    messages: list[dict],
-    max_new_tokens: int,
-    do_sample: bool,
-    temperature: float,
-    top_p: float,
-):
+def generate_reply(tokenizer, model, messages: list[dict], max_new_tokens: int, do_sample: bool, temperature: float, top_p: float) -> str:
     input_ids = tokenizer.apply_chat_template(
         messages,
         tokenize=True,
@@ -163,13 +147,12 @@ def generate_reply(
 
 
 # ================================
-# SIDEBAR: SETTINGS + 5 SKENARIO UJI (DATASET KAMU)
+# SIDEBAR
 # ================================
 with st.sidebar:
     st.subheader("⚙️ Settings")
 
     system_prompt = st.text_area("System prompt", value=DEFAULT_SYSTEM_PROMPT, height=140)
-
     max_context_messages = st.slider("Max context messages (history)", 2, 30, 12, 1)
     max_new_tokens = st.slider("Max new tokens", 64, 512, 256, 32)
 
@@ -196,7 +179,6 @@ with st.sidebar:
 
     for title, prompt in scenarios:
         if st.button(title, use_container_width=True):
-            # klik tombol -> prompt otomatis terkirim pada rerun berikutnya
             st.session_state.queued_user_text = prompt
 
     st.markdown("---")
@@ -214,13 +196,18 @@ with st.sidebar:
 
 
 # ================================
-# LOAD MODEL
+# LOAD MODEL (WITH CLEAR ERROR)
 # ================================
-tokenizer, model = load_model_and_tokenizer(BASE_MODEL, ADAPTER_DIR)
+try:
+    tokenizer, model = load_model_and_tokenizer(BASE_MODEL, ADAPTER_DIR)
+except Exception:
+    st.error("❌ Gagal load model/adapter. Berikut detail error:")
+    st.code(traceback.format_exc())
+    st.stop()
 
 
 # ================================
-# RENDER CHAT HISTORY (AVATAR)
+# RENDER HISTORY
 # ================================
 for m in st.session_state.messages:
     avatar = USER_AVATAR if m["role"] == "user" else BOT_AVATAR
@@ -229,11 +216,10 @@ for m in st.session_state.messages:
 
 
 # ================================
-# INPUT (AUTO-SEND dari tombol skenario)
+# INPUT (AUTO SEND FROM SCENARIO BUTTON)
 # ================================
 user_text = st.chat_input("Tulis pesan…")
 
-# kalau user klik skenario: auto kirim prompt walau chat_input kosong
 if (user_text is None or user_text.strip() == "") and st.session_state.queued_user_text:
     user_text = st.session_state.queued_user_text
     st.session_state.queued_user_text = ""
@@ -257,15 +243,7 @@ with st.chat_message("user", avatar=USER_AVATAR):
 with st.chat_message("assistant", avatar=BOT_AVATAR):
     with st.spinner("Generating..."):
         msgs = build_messages(system_prompt, st.session_state.messages, max_context_messages)
-        reply = generate_reply(
-            tokenizer=tokenizer,
-            model=model,
-            messages=msgs,
-            max_new_tokens=max_new_tokens,
-            do_sample=do_sample,
-            temperature=temperature,
-            top_p=top_p,
-        )
+        reply = generate_reply(tokenizer, model, msgs, max_new_tokens, do_sample, temperature, top_p)
         st.markdown(reply)
 
 st.session_state.messages.append({"role": "assistant", "content": reply})
