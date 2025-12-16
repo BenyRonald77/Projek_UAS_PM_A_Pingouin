@@ -1,0 +1,852 @@
+[
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Apa itu Mirota Kampus?",
+    "output": "Mirota Kampus adalah jaringan toko retail di Yogyakarta yang menjual berbagai kebutuhan mahasiswa dan masyarakat, termasuk alat tulis, kosmetik, sembako, snack, dan perlengkapan rumah tangga."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Apa saja cabang Mirota Kampus yang ada di Yogyakarta?",
+    "output": "Cabang Mirota Kampus yang paling dikenal berada di Jalan C. Simanjuntak, Jalan Monjali, serta beberapa titik lain di Yogyakarta."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Mirota Kampus itu buka jam berapa?",
+    "output": "Umumnya Mirota Kampus buka pukul 08.00–21.00 WIB, namun jam operasional dapat berbeda antar cabang."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Apakah Mirota Kampus menjual alat tulis lengkap?",
+    "output": "Ya, Mirota Kampus menyediakan alat tulis lengkap seperti buku tulis, pulpen, map, binder, kertas A4, dan perlengkapan perkuliahan lainnya."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Apakah Mirota Kampus menjual perlengkapan praktikum farmasi?",
+    "output": "Beberapa cabang Mirota Kampus menyediakan jas lab, masker, sarung tangan, serta botol kecil untuk praktikum, namun kelengkapan tergantung cabang."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Di Mirota Kampus bisa fotokopi atau print tidak?",
+    "output": "Ya, beberapa cabang menyediakan layanan fotokopi, print, jilid, dan laminating."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Apa Mirota Kampus menyediakan sembako?",
+    "output": "Ya, Mirota Kampus menyediakan kebutuhan harian seperti beras, gula, minyak, telur, mie instan, dan produk dapur lainnya."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Apakah ada diskon atau promo di Mirota Kampus?",
+    "output": "Mirota Kampus sering memberikan promo musiman, diskon produk tertentu, dan paket hemat."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Apa Mirota Kampus menyediakan produk kecantikan?",
+    "output": "Ya, Mirota Kampus menjual berbagai kosmetik, skincare, body care, dan perawatan rambut."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Ada layanan pesan antar di Mirota Kampus?",
+    "output": "Beberapa cabang mendukung layanan pesan antar melalui aplikasi seperti GoMart atau GrabMart."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Mirota Kampus menerima pembayaran apa saja?",
+    "output": "Mirota Kampus menerima pembayaran tunai, kartu debit/kredit, QRIS, dan beberapa e-wallet seperti OVO, GoPay, dan Dana."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Apakah ada produk alat rumah tangga di Mirota Kampus?",
+    "output": "Ya, tersedia berbagai perlengkapan rumah tangga seperti sapu, ember, plastik, tisu, dan produk kebersihan lainnya."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Apakah Mirota Kampus menjual snack impor?",
+    "output": "Ya, Mirota Kampus menyediakan snack lokal maupun impor seperti keripik, cokelat, dan minuman kemasan."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Di Mirota Kampus bisa beli seragam sekolah?",
+    "output": "Beberapa cabang menyediakan seragam sekolah dasar hingga SMA, namun ketersediaan tiap cabang bisa berbeda."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Ada parkir motor di Mirota Kampus?",
+    "output": "Ya, hampir semua cabang menyediakan area parkir motor dan sebagian memiliki parkir mobil."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Mirota Kampus melayani pengembalian barang tidak?",
+    "output": "Kebijakan retur berlaku untuk produk tertentu dengan syarat membawa struk dan barang masih dalam kondisi baik."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Apakah ada peralatan elektronik kecil di Mirota Kampus?",
+    "output": "Ya, ada peralatan elektronik kecil seperti kabel data, charger, baterai, lampu, dan aksesoris gadget sederhana."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Apa saja makanan siap saji yang dijual?",
+    "output": "Mirota Kampus menjual roti, kue, snack, minuman dingin, dan makanan instan siap seduh."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Apakah ada produk perawatan bayi di Mirota Kampus?",
+    "output": "Ya, tersedia popok, tisu basah, minyak telon, dan produk perawatan bayi lainnya."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Apakah Mirota Kampus menjual ATK untuk menggambar?",
+    "output": "Ya, tersedia kertas gambar, pensil 2B–8B, spidol, cat air, kuas, dan perlengkapan seni lainnya."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Apakah ada layanan isi ulang air minum?",
+    "output": "Beberapa cabang menyediakan galon isi ulang, namun tidak semua memiliki layanan tersebut."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Mirota Kampus menjual apa saja untuk mahasiswa baru?",
+    "output": "Mirota Kampus menyediakan kebutuhan mahasiswa baru seperti ATK, binder, flashdisk, jas lab, dan kebutuhan kos."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Apakah ada perlengkapan organisasi seperti ID card dan lanyard?",
+    "output": "Ya, tersedia lanyard, plastik ID card, dan perlengkapan organisasi lainnya."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Apakah Mirota Kampus menjual bahan crafting?",
+    "output": "Ya, tersedia bahan crafting seperti pita, lem tembak, manik-manik, dan kertas dekorasi."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Ada kertas khusus untuk skripsi seperti HVS 80 gsm?",
+    "output": "Ya, tersedia HVS 70–80 gsm, ukuran A4 dan F4, serta kertas foto."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Apakah ada stationery premium seperti Zebra atau Pilot?",
+    "output": "Beberapa cabang menyediakan stationery premium seperti Zebra, Pilot, dan Pentel."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Apa saja kebutuhan kos yang tersedia di Mirota Kampus?",
+    "output": "Mirota Kampus menjual kebutuhan kos seperti deterjen, hanger, alat makan, ember, dan perlengkapan kebersihan."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Apakah Mirota Kampus menjual obat bebas?",
+    "output": "Ya, beberapa cabang menjual obat bebas OTC seperti paracetamol, vitamin, dan balsam."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Apakah tersedia voucher atau gift card di Mirota Kampus?",
+    "output": "Tidak semua cabang menyediakan voucher, tetapi beberapa menjual paket hadiah atau hampers."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Di Mirota Kampus bisa beli print foto ukuran kecil?",
+    "output": "Ya, beberapa cabang menyediakan layanan print foto ukuran kecil dan fotokopi warna."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Ada layanan jilid?",
+    "output": "Beberapa cabang menyediakan layanan jilid dan laminating."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Bisa beli alat kebersihan?",
+    "output": "Ya, Mirota Kampus menjual berbagai alat kebersihan seperti sabun, pel, dan cairan pembersih."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Ada parkir mobil?",
+    "output": "Sebagian cabang menyediakan parkir mobil, tergantung lokasi toko."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Mirota buka hari libur?",
+    "output": "Sebagian besar cabang Mirota Kampus tetap buka pada hari libur, namun jam operasional dapat berbeda."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Bisa beli map proposal?",
+    "output": "Ya, tersedia map proposal, map skripsi, dan perlengkapan akademik lainnya."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Mirota jual makanan instan?",
+    "output": "Ya, tersedia mie instan, makanan siap seduh, dan snack."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Mirota cocok buat mahasiswa?",
+    "output": "Ya, Mirota Kampus memang difokuskan untuk memenuhi kebutuhan mahasiswa."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Bisa beli kebutuhan kos?",
+    "output": "Ya, Mirota Kampus menjual berbagai kebutuhan kos mahasiswa."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Buka sampai malam?",
+    "output": "Umumnya buka hingga malam hari sekitar pukul 21.00 WIB."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Mirota jual binder?",
+    "output": "Ya, tersedia binder berbagai ukuran dan merek."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Mirota jual charger HP?",
+    "output": "Ya, tersedia charger, kabel data, dan aksesoris HP sederhana di beberapa cabang."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Bisa bayar pakai Dana?",
+    "output": "Ya, Mirota Kampus menerima pembayaran melalui QRIS termasuk Dana di banyak cabang."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Ada air mineral galon?",
+    "output": "Beberapa cabang menjual air galon dan menyediakan layanan isi ulang."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Bisa retur barang?",
+    "output": "Retur barang mengikuti kebijakan toko dengan syarat tertentu seperti struk pembelian."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Ada promo akhir bulan?",
+    "output": "Promo akhir bulan bisa tersedia, tergantung kebijakan dan program masing-masing cabang."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Apa itu Mirota Kampus?",
+    "output": "Mirota Kampus adalah jaringan toko retail di Yogyakarta yang menyediakan berbagai kebutuhan mahasiswa dan masyarakat."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Mirota Kampus buka jam berapa?",
+    "output": "Umumnya Mirota Kampus buka pukul 08.00–21.00 WIB, namun jam operasional dapat berbeda antar cabang."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Mirota Kampus itu buka hari Minggu?",
+    "output": "Ya, sebagian besar cabang Mirota Kampus tetap buka pada hari Minggu."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Di Mirota Kampus bisa print atau fotokopi?",
+    "output": "Beberapa cabang Mirota Kampus menyediakan layanan print, fotokopi, jilid, dan laminating."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Mirota Kampus jual alat tulis lengkap?",
+    "output": "Ya, Mirota Kampus menyediakan berbagai alat tulis seperti buku, pulpen, binder, dan kertas."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Ada ATK buat skripsi?",
+    "output": "Ya, tersedia map skripsi, kertas HVS, binder, dan perlengkapan penunjang akademik."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Mirota Kampus jual jas lab?",
+    "output": "Beberapa cabang Mirota Kampus menyediakan jas laboratorium dan perlengkapan praktikum."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Ada makanan dan minuman?",
+    "output": "Ya, Mirota Kampus menjual snack, minuman kemasan, dan makanan instan."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Mirota Kampus jual sembako?",
+    "output": "Ya, tersedia kebutuhan harian seperti beras, gula, minyak, dan mie instan."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Bisa bayar pakai QRIS?",
+    "output": "Ya, Mirota Kampus menerima pembayaran QRIS dan metode non-tunai lainnya."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Terima e-wallet apa saja?",
+    "output": "Mirota Kampus menerima pembayaran melalui QRIS seperti OVO, GoPay, dan Dana."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Ada promo atau diskon?",
+    "output": "Mirota Kampus sering menyediakan promo musiman dan diskon produk tertentu."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Mirota Kampus jual kosmetik?",
+    "output": "Ya, tersedia berbagai produk kosmetik dan perawatan tubuh."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Ada perlengkapan kos?",
+    "output": "Ya, Mirota Kampus menjual berbagai kebutuhan kos mahasiswa."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Mirota Kampus ada parkiran?",
+    "output": "Ya, sebagian besar cabang menyediakan area parkir motor dan beberapa juga parkir mobil."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Bisa beli flashdisk?",
+    "output": "Ya, Mirota Kampus menyediakan flashdisk dan aksesoris komputer sederhana."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Ada alat kebersihan?",
+    "output": "Ya, tersedia produk kebersihan seperti sabun, deterjen, dan alat kebersihan lainnya."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Mirota Kampus cocok buat mahasiswa?",
+    "output": "Ya, Mirota Kampus memang ditujukan untuk memenuhi kebutuhan mahasiswa."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Bisa pesan lewat online?",
+    "output": "Beberapa cabang Mirota Kampus mendukung pemesanan melalui layanan seperti GoMart atau GrabMart."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Mirota Kampus jual alat rumah tangga?",
+    "output": "Ya, tersedia perlengkapan rumah tangga seperti ember, sapu, dan peralatan kebersihan."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Sebenarnya Mirota Kampus itu toko apa sih?",
+    "output": "Mirota Kampus merupakan toko retail di Yogyakarta yang menyediakan berbagai kebutuhan mahasiswa dan masyarakat umum."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Kalau mau belanja di Mirota, biasanya buka dari jam berapa ya?",
+    "output": "Pada umumnya Mirota Kampus buka dari pukul 08.00 hingga 21.00 WIB, namun jam buka bisa berbeda antar cabang."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Mirota itu buka terus nggak pas hari libur?",
+    "output": "Sebagian besar cabang Mirota Kampus tetap beroperasi di hari libur, tetapi jamnya bisa menyesuaikan."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Aku butuh ngeprint cepat, di Mirota bisa nggak?",
+    "output": "Beberapa cabang Mirota Kampus menyediakan layanan print dan fotokopi untuk kebutuhan pelanggan."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Kalau cari ATK buat kuliah lengkap nggak di sana?",
+    "output": "Mirota Kampus menyediakan berbagai alat tulis dan perlengkapan kuliah yang cukup lengkap."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Biasanya anak-anak kuliah beli apa aja di Mirota?",
+    "output": "Banyak mahasiswa membeli ATK, kebutuhan kos, makanan ringan, serta perlengkapan akademik."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Mirota jual jas lab juga ya?",
+    "output": "Beberapa cabang menyediakan jas laboratorium dan perlengkapan praktikum lainnya."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Kalau mau beli snack sama minuman gampang nggak?",
+    "output": "Di Mirota Kampus tersedia berbagai snack dan minuman kemasan yang mudah ditemukan."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Buat bayar, harus cash atau bisa non-tunai?",
+    "output": "Mirota Kampus melayani pembayaran tunai maupun non-tunai seperti QRIS dan e-wallet."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Pernah lihat promo, itu sering ada atau jarang?",
+    "output": "Promo di Mirota Kampus biasanya hadir pada periode tertentu seperti diskon musiman atau paket hemat."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Mirota ada jual kosmetik juga nggak sih?",
+    "output": "Ya, tersedia berbagai produk kosmetik dan perawatan diri di beberapa cabang."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Kalau anak kos, kebutuhannya bisa kebeli semua nggak di Mirota?",
+    "output": "Banyak kebutuhan anak kos seperti alat kebersihan dan perlengkapan rumah tangga tersedia di Mirota Kampus."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Parkir di Mirota aman nggak?",
+    "output": "Sebagian besar cabang menyediakan area parkir untuk motor dan beberapa juga menyediakan parkir mobil."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Bisa nggak sih bayar pakai QRIS?",
+    "output": "Ya, pembayaran menggunakan QRIS tersedia di sebagian besar cabang Mirota Kampus."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Kalau mau belanja online, Mirota bisa lewat aplikasi nggak?",
+    "output": "Beberapa cabang Mirota Kampus dapat diakses melalui layanan belanja online seperti GoMart atau GrabMart."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Hari libur masih bisa belanja di Mirota?",
+    "output": "Sebagian besar cabang Mirota Kampus tetap buka di hari libur."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Kalau nyari alat tulis lengkap, Mirota oke nggak?",
+    "output": "Mirota Kampus cukup lengkap untuk kebutuhan alat tulis dan perlengkapan kuliah."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Mirota itu ramah mahasiswa nggak?",
+    "output": "Ya, Mirota Kampus memang dikenal ramah dan dekat dengan kebutuhan mahasiswa."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Ada promo menarik nggak biasanya?",
+    "output": "Mirota Kampus sering menghadirkan promo atau diskon di periode tertentu."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Mirota itu sebenarnya tempat apa ya?",
+    "output": "Mirota Kampus adalah toko retail di Yogyakarta yang menyediakan berbagai kebutuhan mahasiswa dan masyarakat umum."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Mirota bisa jadi tempat belanja anak kos nggak?",
+    "output": "Bisa, karena Mirota Kampus menyediakan banyak kebutuhan anak kos dan mahasiswa."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Di Mirota ada makanan ringan buat ngemil?",
+    "output": "Ya, tersedia berbagai snack dan minuman kemasan di Mirota Kampus."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Bayarnya ribet nggak sih di Mirota?",
+    "output": "Tidak ribet, karena Mirota Kampus menerima pembayaran tunai dan non-tunai seperti QRIS."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Butuh ngeprint dadakan, Mirota bisa nolong nggak?",
+    "output": "Beberapa cabang Mirota Kampus menyediakan layanan print dan fotokopi."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Kalau ke Mirota pagi-pagi sudah buka belum?",
+    "output": "Umumnya Mirota Kampus mulai buka sekitar pukul 08.00 WIB, tergantung cabangnya."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Mirota Kampus buka sampai jam berapa malam ini?",
+    "output": "Jam operasional Mirota Kampus dapat berbeda antar cabang. Untuk informasi paling akurat, silakan cek cabang terdekat."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Apakah semua Mirota Kampus ada layanan print?",
+    "output": "Tidak semua cabang menyediakan layanan print. Layanan dapat berbeda tergantung cabang."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Mirota Kampus hari ini buka atau tutup?",
+    "output": "Sebagian besar cabang biasanya buka, namun jam dan status operasional bisa berubah. Disarankan mengonfirmasi ke cabang terkait."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Apakah ada promo besar hari ini?",
+    "output": "Promo di Mirota Kampus bersifat situasional dan dapat berbeda tiap cabang serta periode waktu."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Stok jas lab lengkap nggak sekarang?",
+    "output": "Ketersediaan stok bergantung pada masing-masing cabang dan waktu kunjungan."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Mirota Kampus bisa pesan antar semua produk?",
+    "output": "Layanan pesan antar tersedia di beberapa cabang dan produk tertentu saja."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Apakah Mirota Kampus ada di semua daerah Jogja?",
+    "output": "Mirota Kampus memiliki beberapa cabang di Yogyakarta, namun tidak tersedia di semua wilayah."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Apakah harga di semua cabang sama?",
+    "output": "Harga produk umumnya serupa, namun bisa terdapat perbedaan kecil antar cabang."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Ada parkir mobil yang luas nggak?",
+    "output": "Fasilitas parkir berbeda tergantung lokasi cabang dan kondisi area sekitar."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Apakah hari ini ramai?",
+    "output": "Tingkat keramaian dapat berbeda tergantung waktu dan cabang yang dikunjungi."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Bisa retur semua barang?",
+    "output": "Kebijakan retur berlaku untuk produk tertentu dengan syarat dan ketentuan yang berlaku."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Apakah semua cabang terima QRIS?",
+    "output": "Sebagian besar cabang menerima QRIS, namun ketersediaannya dapat berbeda."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Mirota Kampus jual obat tertentu?",
+    "output": "Produk obat bebas tersedia di beberapa cabang, tergantung kebijakan dan stok."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Ada layanan jilid sekarang?",
+    "output": "Layanan jilid tersedia di beberapa cabang dan tergantung jam operasional."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Mirota Kampus buka sampai malam banget nggak?",
+    "output": "Umumnya Mirota Kampus buka hingga malam hari, namun jam pastinya dapat berbeda antar cabang."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Ada diskon khusus mahasiswa?",
+    "output": "Program diskon dapat berubah sewaktu-waktu dan tergantung kebijakan cabang."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Apakah semua barang selalu tersedia?",
+    "output": "Ketersediaan barang dapat berubah tergantung stok dan permintaan."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Mirota Kampus ada wifi gratis?",
+    "output": "Fasilitas seperti wifi tidak tersedia di semua cabang."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Bisa pesan barang khusus?",
+    "output": "Pemesanan barang khusus tergantung kebijakan masing-masing cabang."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Hari ini ada event tertentu nggak?",
+    "output": "Informasi event dapat berbeda dan biasanya diumumkan oleh masing-masing cabang."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Kok di Mirota sering kehabisan barang sih?",
+    "output": "Kami memahami ketidaknyamanan tersebut. Ketersediaan barang dapat berubah tergantung stok dan waktu kunjungan."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Tadi saya ke Mirota tapi barang yang dicari nggak ada.",
+    "output": "Mohon maaf atas ketidaknyamanannya. Stok barang bisa berbeda di tiap cabang dan waktu tertentu."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Kenapa antriannya lama banget?",
+    "output": "Antrian dapat lebih lama pada jam ramai. Kami mohon pengertiannya dan terima kasih atas kesabarannya."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Pelayanannya kok lama ya?",
+    "output": "Kami memahami keluhan Anda. Waktu pelayanan dapat dipengaruhi oleh jumlah pengunjung dan kondisi toko."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Saya buru-buru tapi kasirnya cuma satu.",
+    "output": "Kami mohon maaf atas ketidaknyamanan yang terjadi. Kondisi operasional dapat berbeda tergantung situasi di cabang."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Barangnya habis padahal kemarin masih ada.",
+    "output": "Stok barang dapat berubah dengan cepat tergantung permintaan. Kami sarankan mengecek cabang lain jika memungkinkan."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Kok parkirnya susah banget ya?",
+    "output": "Fasilitas parkir berbeda di tiap cabang dan tergantung kondisi area sekitar."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Harganya kok beda sama yang saya lihat kemarin?",
+    "output": "Perbedaan harga dapat terjadi karena promo atau pembaruan harga di waktu tertentu."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Saya kecewa karena barang yang dicari nggak ketemu.",
+    "output": "Kami memahami rasa kecewa tersebut. Ketersediaan barang memang bisa berbeda di setiap waktu dan cabang."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Tadi katanya bisa print, tapi ternyata nggak bisa.",
+    "output": "Mohon maaf atas kebingungannya. Layanan dapat berbeda tergantung cabang dan jam operasional."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Kok informasinya beda-beda sih?",
+    "output": "Informasi dapat berbeda karena kebijakan dan fasilitas tiap cabang tidak selalu sama."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Saya sudah jauh-jauh datang tapi ternyata tutup.",
+    "output": "Kami mohon maaf atas ketidaknyamanannya. Jam operasional dapat berubah pada kondisi tertentu."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Pelayanannya kurang ramah menurut saya.",
+    "output": "Terima kasih atas masukannya. Kami menghargai feedback Anda dan akan menjadi bahan evaluasi."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Saya capek nunggu tapi belum dilayani juga.",
+    "output": "Kami memahami ketidaknyamanan tersebut dan mengapresiasi kesabaran Anda."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Kok barang yang diskon susah dicari?",
+    "output": "Produk promo biasanya terbatas jumlahnya dan tergantung ketersediaan stok."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Tadi dibilang ada promo, tapi pas bayar nggak ada.",
+    "output": "Promo dapat memiliki syarat tertentu dan periode terbatas. Mohon maaf atas kebingungannya."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Saya ngerasa informasinya kurang jelas.",
+    "output": "Kami mohon maaf atas ketidaknyamanan tersebut. Informasi dapat berbeda tergantung cabang."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Kok hari ini rame banget sih?",
+    "output": "Tingkat keramaian dapat meningkat pada jam tertentu atau hari tertentu."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Saya nggak puas dengan pengalaman belanja tadi.",
+    "output": "Terima kasih atas masukannya. Kami menghargai setiap masukan untuk perbaikan layanan."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Kok responnya lama ya?",
+    "output": "Kami mohon maaf atas keterlambatan respon. Terima kasih atas pengertiannya."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Kok daging ayamnya sering habis sih?",
+    "output": "Kami memahami ketidaknyamanan tersebut. Stok daging dapat habis lebih cepat tergantung permintaan dan waktu kedatangan."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Tadi saya cari daging sapi tapi nggak ada.",
+    "output": "Mohon maaf atas ketidaknyamanannya. Ketersediaan daging dapat berbeda di tiap cabang dan waktu tertentu."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Dagingnya masih segar nggak sih?",
+    "output": "Kualitas dan kesegaran produk selalu dijaga, namun kondisi stok dapat berbeda tergantung cabang dan waktu."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Kok dagingnya kelihatan tinggal sedikit?",
+    "output": "Stok daging bisa menipis pada jam ramai. Kami sarankan datang lebih awal atau mengecek cabang lain."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Harga daging hari ini kok mahal ya?",
+    "output": "Harga daging dapat berubah mengikuti kondisi pasar dan kebijakan pemasok."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Saya ragu sama kualitas dagingnya.",
+    "output": "Kami memahami kekhawatiran Anda. Produk daging dipasok dari pemasok terpercaya sesuai standar toko."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Ada daging tapi nggak lengkap potongannya.",
+    "output": "Ketersediaan jenis dan potongan daging dapat berbeda tergantung stok cabang."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Kok daging ayam filletnya susah dicari?",
+    "output": "Produk tertentu seperti ayam fillet sering cepat habis karena permintaan tinggi."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Daging beku di sini aman nggak?",
+    "output": "Daging beku disimpan sesuai prosedur penyimpanan, namun jenis produk dapat berbeda antar cabang."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Tadi katanya ada daging, tapi pas saya datang sudah habis.",
+    "output": "Mohon maaf atas ketidaknyamanannya. Stok dapat berubah dengan cepat tergantung jumlah pembeli."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Dagingnya ada bau dikit, normal nggak?",
+    "output": "Jika Anda ragu dengan kondisi produk, silakan sampaikan ke petugas toko untuk pengecekan lebih lanjut."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Saya butuh daging sekarang tapi stoknya kosong.",
+    "output": "Kami mohon maaf atas ketidaknyamanan tersebut. Stok daging tergantung pengiriman dan permintaan harian."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Kok informasi stok dagingnya nggak jelas ya?",
+    "output": "Informasi stok dapat berbeda karena perubahan cepat di lapangan. Kami sarankan menanyakan langsung ke petugas toko."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Dagingnya kelihatannya beda dari biasanya.",
+    "output": "Perbedaan dapat terjadi karena pemasok atau jenis potongan yang tersedia."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Saya takut dagingnya nggak fresh.",
+    "output": "Kami memahami kekhawatiran tersebut. Mirota Kampus berupaya menjaga kualitas produk sesuai standar."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Ada daging halal yang jelas nggak?",
+    "output": "Produk daging yang dijual mengikuti standar dan informasi yang tertera pada kemasan."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Kok dagingnya cepat habis terus?",
+    "output": "Daging merupakan produk dengan permintaan tinggi sehingga stok bisa cepat habis."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Saya kecewa karena daging yang saya cari nggak ada.",
+    "output": "Kami memahami rasa kecewa Anda. Ketersediaan daging memang bisa berbeda di setiap waktu."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Dagingnya ada tapi ukurannya kecil-kecil.",
+    "output": "Ukuran dan potongan daging dapat berbeda tergantung jenis produk dan pemasok."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna berikut dengan jelas, sopan, dan akurat terkait informasi Mirota Kampus.",
+    "input": "Bisa pesan daging dulu nggak biar nggak kehabisan?",
+    "output": "Pemesanan produk tertentu tergantung kebijakan masing-masing cabang."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna dengan jelas dan aman terkait Mirota Kampus.",
+    "input": "Di Mirota ada tali rafia nggak?",
+    "output": "Beberapa cabang Mirota Kampus menjual tali rafia dan perlengkapan serupa, tergantung stok."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna dengan jelas dan aman terkait Mirota Kampus.",
+    "input": "Jual lakban bening ukuran besar nggak?",
+    "output": "Lakban berbagai ukuran tersedia di beberapa cabang, tergantung ketersediaan."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna dengan jelas dan aman terkait Mirota Kampus.",
+    "input": "Ada cutter atau pisau kecil?",
+    "output": "Ya, tersedia cutter dan alat potong sederhana di beberapa cabang."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna dengan jelas dan aman terkait Mirota Kampus.",
+    "input": "Di Mirota jual meteran nggak?",
+    "output": "Beberapa cabang menyediakan meteran gulung dan alat ukur sederhana."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna dengan jelas dan aman terkait Mirota Kampus.",
+    "input": "Ada korek api?",
+    "output": "Produk seperti korek api tersedia di cabang tertentu sesuai kebijakan toko."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna dengan jelas dan aman terkait Mirota Kampus.",
+    "input": "Jual kabel roll atau stop kontak panjang?",
+    "output": "Peralatan listrik sederhana seperti stop kontak tersedia di beberapa cabang."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna dengan jelas dan aman terkait Mirota Kampus.",
+    "input": "Ada karet gelang besar?",
+    "output": "Karet gelang tersedia dengan berbagai ukuran, tergantung stok cabang."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna dengan jelas dan aman terkait Mirota Kampus.",
+    "input": "Jual penjepit jemuran?",
+    "output": "Beberapa cabang menjual perlengkapan rumah tangga seperti penjepit jemuran."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna dengan jelas dan aman terkait Mirota Kampus.",
+    "input": "Ada plastik vacuum sealer nggak?",
+    "output": "Produk khusus seperti plastik vacuum sealer tidak tersedia di semua cabang."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna dengan jelas dan aman terkait Mirota Kampus.",
+    "input": "Jual lilin biasa?",
+    "output": "Lilin tersedia di beberapa cabang sebagai perlengkapan rumah tangga."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna dengan jelas dan aman terkait Mirota Kampus.",
+    "input": "Ada spons cuci mobil?",
+    "output": "Beberapa cabang menyediakan spons dan alat kebersihan kendaraan."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna dengan jelas dan aman terkait Mirota Kampus.",
+    "input": "Jual benang jahit?",
+    "output": "Benang jahit tersedia di cabang tertentu tergantung kelengkapan produk."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna dengan jelas dan aman terkait Mirota Kampus.",
+    "input": "Ada jarum pentul?",
+    "output": "Perlengkapan kecil seperti jarum pentul tersedia di beberapa cabang."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna dengan jelas dan aman terkait Mirota Kampus.",
+    "input": "Jual isolasi kain?",
+    "output": "Isolasi kain tersedia di cabang tertentu sesuai stok."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna dengan jelas dan aman terkait Mirota Kampus.",
+    "input": "Ada baterai jam dinding?",
+    "output": "Beberapa cabang menjual baterai kecil untuk jam dinding."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna dengan jelas dan aman terkait Mirota Kampus.",
+    "input": "Jual kipas tangan?",
+    "output": "Produk seperti kipas tangan tersedia musiman dan tergantung cabang."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna dengan jelas dan aman terkait Mirota Kampus.",
+    "input": "Ada saringan teh?",
+    "output": "Peralatan dapur kecil seperti saringan teh tersedia di beberapa cabang."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna dengan jelas dan aman terkait Mirota Kampus.",
+    "input": "Jual pengharum laci?",
+    "output": "Pengharum ruangan dan laci tersedia di cabang tertentu."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna dengan jelas dan aman terkait Mirota Kampus.",
+    "input": "Ada gantungan baju lipat?",
+    "output": "Produk gantungan baju tersedia dengan variasi tergantung cabang."
+  },
+  {
+    "instruction": "Jawab pertanyaan pengguna dengan jelas dan aman terkait Mirota Kampus.",
+    "input": "Jual penutup telinga atau earplug?",
+    "output": "Earplug tersedia di beberapa cabang sebagai perlengkapan kesehatan ringan."
+  }
+]
