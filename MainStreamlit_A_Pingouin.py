@@ -11,7 +11,7 @@ from peft import PeftModel
 # PAGE CONFIG
 # ================================
 st.set_page_config(
-    page_title="Chatbot Mirota Kampus (Fine-tuned LoRA.)",
+    page_title="Chatbot Mirota Kampus (Fine-tuned LoRA)",
     page_icon="🤖",
     layout="centered"
 )
@@ -26,20 +26,18 @@ st.caption("Multi-turn chat • Avatar • Skenario uji dari dataset • Streaml
 BASE_MODEL = os.getenv("BASE_MODEL", "meta-llama/Llama-3.2-1B-Instruct")  # gated
 ADAPTER_DIR = os.getenv("ADAPTER_DIR", "output_lora")
 
-USER_AVATAR = os.getenv("USER_AVATAR", "😡")
-BOT_AVATAR  = os.getenv("BOT_AVATAR", "🛍️")
+USER_AVATAR = os.getenv("USER_AVATAR", "👤")
+BOT_AVATAR  = os.getenv("BOT_AVATAR", "🤖")
 
 DEFAULT_SYSTEM_PROMPT = os.getenv(
     "SYSTEM_PROMPT",
     "Kamu adalah chatbot layanan informasi Mirota Kampus. "
-    "Jawab dengan jelas, sopan, dan sesuai informasi yang kamu ketahui dari fine-tuning. "
+    "Jawab dengan jelas, sopan, dan singkat (maks 2–3 kalimat). "
     "Jika informasi bisa berbeda antar cabang, jelaskan bahwa kebijakan dapat berbeda antar cabang."
 )
 
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
-
-# ✅ OOM-hemat: biarkan transformers memilih dtype paling cocok
-DTYPE = "auto"   # <- sesuai permintaan kamu
+DTYPE = "auto"  # hemat RAM & aman di Streamlit Cloud
 
 
 # ================================
@@ -55,7 +53,6 @@ if "queued_user_text" not in st.session_state:
 # TOKEN LOADER (SAFE)
 # ================================
 def get_hf_token() -> str | None:
-    # 1) Streamlit secrets (Cloud)
     try:
         tok = st.secrets.get("HF_TOKEN", None)
         if tok and str(tok).strip():
@@ -63,7 +60,6 @@ def get_hf_token() -> str | None:
     except Exception:
         pass
 
-    # 2) Environment variable
     tok_env = os.getenv("HF_TOKEN", None)
     if tok_env and str(tok_env).strip():
         return str(tok_env).strip()
@@ -78,9 +74,7 @@ def get_hf_token() -> str | None:
 def load_model_and_tokenizer(base_model: str, adapter_dir: str):
     hf_token = get_hf_token()
     if hf_token is None:
-        raise RuntimeError(
-            "HF_TOKEN belum diset. Tambahkan di Streamlit Secrets atau environment variable."
-        )
+        raise RuntimeError("HF_TOKEN belum diset (Secrets atau env var).")
 
     # Tokenizer
     try:
@@ -92,40 +86,40 @@ def load_model_and_tokenizer(base_model: str, adapter_dir: str):
         tokenizer.pad_token = tokenizer.eos_token
     tokenizer.padding_side = "right"
 
-    # Base model (OOM-hemat)
-    # ✅ low_cpu_mem_usage=True sesuai permintaan kamu
+    # Base model (hemat RAM)
     try:
         base = AutoModelForCausalLM.from_pretrained(
             base_model,
             token=hf_token,
-            torch_dtype=DTYPE,            # "auto"
-            low_cpu_mem_usage=True        # <- hemat peak RAM saat load
+            torch_dtype=DTYPE,
+            low_cpu_mem_usage=True,
         )
     except TypeError:
         base = AutoModelForCausalLM.from_pretrained(
             base_model,
             use_auth_token=hf_token,
             torch_dtype=DTYPE,
-            low_cpu_mem_usage=True
+            low_cpu_mem_usage=True,
         )
 
     # Adapter
     if not os.path.exists(adapter_dir):
-        raise FileNotFoundError(
-            f"Folder adapter '{adapter_dir}' tidak ditemukan. Pastikan folder itu ada di repo."
-        )
+        raise FileNotFoundError(f"Folder adapter '{adapter_dir}' tidak ditemukan di repo.")
 
-    files = os.listdir(adapter_dir)
-    if len(files) == 0:
-        raise FileNotFoundError(f"Folder '{adapter_dir}' kosong. Upload adapter LoRA kamu ke repo.")
+    if len(os.listdir(adapter_dir)) == 0:
+        raise FileNotFoundError(f"Folder '{adapter_dir}' kosong. Upload adapter LoRA ke repo.")
 
-    # Attach LoRA
     model = PeftModel.from_pretrained(base, adapter_dir)
 
-    # Move to device
     model.to(DEVICE)
     model.eval()
     model.config.use_cache = True
+
+    # Kadang membantu mengurangi lag di environment kecil
+    try:
+        torch.set_num_threads(1)
+    except Exception:
+        pass
 
     return tokenizer, model
 
@@ -138,16 +132,35 @@ def build_messages(system_prompt: str, history: list[dict], max_context_messages
 
 
 @torch.inference_mode()
-def generate_reply(tokenizer, model, messages: list[dict], max_new_tokens: int, do_sample: bool, temperature: float, top_p: float) -> str:
-    input_ids = tokenizer.apply_chat_template(
+def generate_reply(
+    tokenizer,
+    model,
+    messages: list[dict],
+    max_new_tokens: int,
+    do_sample: bool,
+    temperature: float,
+    top_p: float
+) -> str:
+    # Pakai apply_chat_template -> text -> tokenize, supaya dapat attention_mask
+    prompt_text = tokenizer.apply_chat_template(
         messages,
-        tokenize=True,
-        add_generation_prompt=True,
+        tokenize=False,
+        add_generation_prompt=True
+    )
+
+    enc = tokenizer(
+        prompt_text,
         return_tensors="pt",
-    ).to(DEVICE)
+        padding=True,
+        truncation=True
+    )
+
+    input_ids = enc["input_ids"].to(DEVICE)
+    attention_mask = enc["attention_mask"].to(DEVICE)
 
     gen_ids = model.generate(
         input_ids=input_ids,
+        attention_mask=attention_mask,  # ✅ hilangkan warning & lebih reliable
         max_new_tokens=max_new_tokens,
         do_sample=do_sample,
         temperature=max(temperature, 1e-6),
@@ -157,8 +170,7 @@ def generate_reply(tokenizer, model, messages: list[dict], max_new_tokens: int, 
     )
 
     new_tokens = gen_ids[0, input_ids.shape[1]:]
-    text = tokenizer.decode(new_tokens, skip_special_tokens=True).strip()
-    return text
+    return tokenizer.decode(new_tokens, skip_special_tokens=True).strip()
 
 
 # ================================
@@ -168,17 +180,20 @@ with st.sidebar:
     st.subheader("⚙️ Settings")
 
     system_prompt = st.text_area("System prompt", value=DEFAULT_SYSTEM_PROMPT, height=140)
-    max_context_messages = st.slider("Max context messages (history)", 2, 30, 12, 1)
-    max_new_tokens = st.slider("Max new tokens", 64, 512, 256, 32)
 
-    deterministic = st.checkbox("Deterministic (no sampling)", value=False)
+    max_context_messages = st.slider("Max context messages (history)", 2, 30, 12, 1)
+
+    # ✅ default diperkecil biar lebih cepat
+    max_new_tokens = st.slider("Max new tokens", 32, 256, 128, 16)
+
+    deterministic = st.checkbox("Deterministic (no sampling)", value=True)
     if deterministic:
         do_sample = False
         temperature = 0.0
         top_p = 1.0
     else:
         do_sample = True
-        temperature = st.slider("Temperature", 0.1, 1.5, 0.7, 0.1)
+        temperature = st.slider("Temperature", 0.1, 1.5, 0.5, 0.1)
         top_p = st.slider("Top-p", 0.1, 1.0, 0.9, 0.05)
 
     st.markdown("---")
@@ -208,22 +223,22 @@ with st.sidebar:
 
     st.caption(f"Base: `{BASE_MODEL}`")
     st.caption(f"Adapter: `{ADAPTER_DIR}`")
-    st.caption(f"torch_dtype: `{DTYPE}`")
+    st.caption(f"dtype: `{DTYPE}`")
 
 
 # ================================
-# LOAD MODEL (WITH CLEAR ERROR)
+# LOAD MODEL (CLEAR ERROR)
 # ================================
 try:
     tokenizer, model = load_model_and_tokenizer(BASE_MODEL, ADAPTER_DIR)
 except Exception:
-    st.error("❌ Gagal load model/adapter. Berikut detail error:")
+    st.error("❌ Gagal load model/adapter. Detail error:")
     st.code(traceback.format_exc())
     st.stop()
 
 
 # ================================
-# RENDER HISTORY
+# RENDER HISTORY (AVATAR)
 # ================================
 for m in st.session_state.messages:
     avatar = USER_AVATAR if m["role"] == "user" else BOT_AVATAR
@@ -232,7 +247,7 @@ for m in st.session_state.messages:
 
 
 # ================================
-# INPUT (AUTO SEND FROM SCENARIO BUTTON)
+# INPUT (AUTO SEND FROM SCENARIO)
 # ================================
 user_text = st.chat_input("Tulis pesan…")
 
@@ -248,7 +263,6 @@ if user_text is None or user_text.strip() == "":
 # APPEND USER MESSAGE
 # ================================
 st.session_state.messages.append({"role": "user", "content": user_text})
-
 with st.chat_message("user", avatar=USER_AVATAR):
     st.markdown(user_text)
 
