@@ -11,7 +11,7 @@ from peft import PeftModel
 # PAGE CONFIG
 # ================================
 st.set_page_config(
-    page_title="Chatbot Mirota Kampus (Fine-tuned LoRA)",
+    page_title="Chatbot Mirota Kampus (Fine-tuned LoRA.)",
     page_icon="🤖",
     layout="centered"
 )
@@ -37,7 +37,9 @@ DEFAULT_SYSTEM_PROMPT = os.getenv(
 )
 
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
-DTYPE  = torch.float16 if torch.cuda.is_available() else torch.float32
+
+# ✅ OOM-hemat: biarkan transformers memilih dtype paling cocok
+DTYPE = "auto"   # <- sesuai permintaan kamu
 
 
 # ================================
@@ -53,7 +55,7 @@ if "queued_user_text" not in st.session_state:
 # TOKEN LOADER (SAFE)
 # ================================
 def get_hf_token() -> str | None:
-    # 1) Streamlit Cloud secrets
+    # 1) Streamlit secrets (Cloud)
     try:
         tok = st.secrets.get("HF_TOKEN", None)
         if tok and str(tok).strip():
@@ -90,11 +92,22 @@ def load_model_and_tokenizer(base_model: str, adapter_dir: str):
         tokenizer.pad_token = tokenizer.eos_token
     tokenizer.padding_side = "right"
 
-    # Base model
+    # Base model (OOM-hemat)
+    # ✅ low_cpu_mem_usage=True sesuai permintaan kamu
     try:
-        base = AutoModelForCausalLM.from_pretrained(base_model, token=hf_token, torch_dtype=DTYPE)
+        base = AutoModelForCausalLM.from_pretrained(
+            base_model,
+            token=hf_token,
+            torch_dtype=DTYPE,            # "auto"
+            low_cpu_mem_usage=True        # <- hemat peak RAM saat load
+        )
     except TypeError:
-        base = AutoModelForCausalLM.from_pretrained(base_model, use_auth_token=hf_token, torch_dtype=DTYPE)
+        base = AutoModelForCausalLM.from_pretrained(
+            base_model,
+            use_auth_token=hf_token,
+            torch_dtype=DTYPE,
+            low_cpu_mem_usage=True
+        )
 
     # Adapter
     if not os.path.exists(adapter_dir):
@@ -102,12 +115,14 @@ def load_model_and_tokenizer(base_model: str, adapter_dir: str):
             f"Folder adapter '{adapter_dir}' tidak ditemukan. Pastikan folder itu ada di repo."
         )
 
-    # Debug list adapter files
-    adapter_files = os.listdir(adapter_dir)
-    if len(adapter_files) == 0:
+    files = os.listdir(adapter_dir)
+    if len(files) == 0:
         raise FileNotFoundError(f"Folder '{adapter_dir}' kosong. Upload adapter LoRA kamu ke repo.")
 
+    # Attach LoRA
     model = PeftModel.from_pretrained(base, adapter_dir)
+
+    # Move to device
     model.to(DEVICE)
     model.eval()
     model.config.use_cache = True
@@ -193,6 +208,7 @@ with st.sidebar:
 
     st.caption(f"Base: `{BASE_MODEL}`")
     st.caption(f"Adapter: `{ADAPTER_DIR}`")
+    st.caption(f"torch_dtype: `{DTYPE}`")
 
 
 # ================================
