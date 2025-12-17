@@ -28,4 +28,4 @@ Chatbot Streamlit yang memuat **base LLM (gated)** + **LoRA adapter hasil fine-t
 - **5 skenario pengujian** (klik → auto kirim prompt) khusus dataset Mirota.
 - UI chat dengan **avatar** user & bot.
 
----
+### Dikarenakan saat upload ke streamlit terbatas CPU cloud streamlit, untuk menghindari Out Of Memory, pada Code Streamlit Projek ini, kami turukan performanya agar bisa upload aplikasinya ke streamlit
